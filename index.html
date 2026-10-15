@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menu Kopi Senja: kopi, makanan, dan camilan hangat. Pesan langsung lewat WhatsApp.">
+  <title>Menu Kopi Senja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true"><span class="loader-cup">☕</span><span class="loader-text">Menyeduh menu…</span></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <nav class="nav-kategori" id="nav" aria-label="Navigasi antar kategori">
+    <a class="nav-logo" href="#atas">Kopi Senja</a>
+    <ul class="nav-links">
+      <li><a href="#minuman" data-spy="minuman">Minuman</a></li>
+      <li><a href="#makanan" data-spy="makanan">Makanan</a></li>
+      <li><a href="#camilan" data-spy="camilan">Camilan</a></li>
+      <li><a href="#info" data-spy="info">Info</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="atas">
+    <canvas class="hero-canvas" id="beans" aria-hidden="true"></canvas>
+    <div class="hero-text">
+      <p class="eyebrow">Kafe sudut kota · sejak 2019</p>
+      <h1>Kopi Senja</h1>
+      <p class="slogan">Seduh pelan, nikmati hangatnya sebelum matahari terbenam.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary magnetic" href="#minuman">Lihat Menu</a>
+        <a class="btn btn-ghost magnetic" href="https://wa.me/6281234567890?text=Halo%20Kopi%20Senja%2C%20saya%20mau%20pesan." target="_blank" rel="noopener">Pesan via WhatsApp</a>
+      </div>
+      <ul class="stats">
+        <li><strong data-count="13">0</strong><span>pilihan menu</span></li>
+        <li><strong data-count="5">0</strong><span>tahun menyeduh</span></li>
+        <li><strong data-count="4800" data-suffix="+">0</strong><span>cangkir per bulan</span></li>
+      </ul>
+    </div>
+    <div class="hero-art tilt">
+      <img src="hero.svg" alt="Ilustrasi secangkir kopi panas beruap di atas piring, dikelilingi biji kopi" width="520" height="520">
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Kopi Susu Senja</span><span>★</span><span>Nasi Goreng Kampung</span><span>★</span><span>Cheesecake Panggang</span><span>★</span><span>Es Kopi Gula Aren</span><span>★</span><span>Pisang Goreng Keju</span><span>★</span>
+      <span>Kopi Susu Senja</span><span>★</span><span>Nasi Goreng Kampung</span><span>★</span><span>Cheesecake Panggang</span><span>★</span><span>Es Kopi Gula Aren</span><span>★</span><span>Pisang Goreng Keju</span><span>★</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="toolbar reveal">
+      <label class="search" for="cari">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input type="search" id="cari" placeholder="Cari menu, mis. kopi, keju, pedas…" autocomplete="off">
+      </label>
+      <p class="hint" id="hasil" role="status">Menampilkan semua 13 menu</p>
+    </div>
+
+    <section class="kategori" id="minuman" aria-labelledby="h-minuman">
+      <div class="kategori-head reveal">
+        <h2 id="h-minuman">Kopi &amp; Minuman</h2>
+        <p>Biji pilihan dari dataran tinggi Gayo dan Kintamani, disangrai medium.</p>
+      </div>
+      <div class="table-wrap reveal">
+        <table class="tabel-menu">
+          <thead><tr><th>Menu</th><th class="col-desc">Deskripsi</th><th class="col-harga">Harga</th><th><span class="sr-only">Pesan</span></th></tr></thead>
+          <tbody>
+            <tr class="menu-item" data-name="Kopi Susu Senja" data-price="22000" data-tags="kopi susu manis">
+              <td><span class="nama">Kopi Susu Senja</span><span class="label-best">Best Seller</span></td>
+              <td class="col-desc">Espresso, susu segar, gula aren cair.</td>
+              <td class="harga col-harga">Rp 22.000</td>
+              <td><button class="btn-add" type="button" aria-label="Tambah Kopi Susu Senja">+</button></td>
+            </tr>
+            <tr class="menu-item" data-name="Es Kopi Gula Aren" data-price="20000" data-tags="kopi es dingin">
+              <td><span class="nama">Es Kopi Gula Aren</span></td>
+              <td class="col-desc">Kopi dingin dengan aroma karamel aren.</td>
+              <td class="harga col-harga">Rp 20.000</td>
+              <td><button class="btn-add" type="button" aria-label="Tambah Es Kopi Gula Aren">+</button></td>
+            </tr>
+            <tr class="menu-item" data-name="Americano" data-price="18000" data-tags="kopi hitam pahit">
+              <td><span class="nama">Americano</span></td>
+              <td class="col-desc">Double shot espresso, air panas.</td>
+              <td class="harga col-harga">Rp 18.000</td>
+              <td><button class="btn-add" type="button" aria-label="Tambah Americano">+</button></td>
+            </tr>
+            <tr class="menu-item" data-name="Matcha Latte" data-price="24000" data-tags="matcha teh hijau susu">
+              <td><span class="nama">Matcha Latte</span></td>
+              <td class="col-desc">Matcha Uji, susu oat, sedikit madu.</td>
+              <td class="harga col-harga">Rp 24.000</td>
+              <td><button class="btn-add" type="button" aria-label="Tambah Matcha Latte">+</button></td>
+            </tr>
+            <tr class="menu-item" data-name="Teh Tarik Jahe" data-price="16000" data-tags="teh jahe hangat">
+              <td><span class="nama">Teh Tarik Jahe</span></td>
+              <td class="col-desc">Teh pekat, jahe merah, susu kental.</td>
+              <td class="harga col-harga">Rp 16.000</td>
+              <td><button class="btn-add" type="button" aria-label="Tambah Teh Tarik Jahe">+</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="kategori" id="makanan" aria-labelledby="h-makanan">
+      <div class="kategori-head reveal">
+        <h2 id="h-makanan">Makanan Utama</h2>
+        <p>Porsi mengenyangkan, dimasak saat dipesan.</p>
+      </div>
+      <div class="kartu-wrap">
+        <article class="kartu-menu menu-item reveal tilt" data-name="Nasi Goreng Kampung" data-price="28000" data-tags="nasi goreng telur pedas">
+          <span class="label-best">Best Seller</span>
+          <div class="kartu-emoji" aria-hidden="true">🍳</div>
+          <h3 class="nama">Nasi Goreng Kampung</h3>
+          <p>Nasi goreng bumbu terasi, telur mata sapi, kerupuk.</p>
+          <div class="kartu-foot"><span class="harga">Rp 28.000</span><button class="btn-add" type="button" aria-label="Tambah Nasi Goreng Kampung">+</button></div>
+        </article>
+        <article class="kartu-menu menu-item reveal tilt" data-name="Mie Kuah Pedas" data-price="25000" data-tags="mie kuah pedas">
+          <div class="kartu-emoji" aria-hidden="true">🍜</div>
+          <h3 class="nama">Mie Kuah Pedas</h3>
+          <p>Mie telur, kaldu ayam, cabai rawit, sawi, bakso.</p>
+          <div class="kartu-foot"><span class="harga">Rp 25.000</span><button class="btn-add" type="button" aria-label="Tambah Mie Kuah Pedas">+</button></div>
+        </article>
+        <article class="kartu-menu menu-item reveal tilt" data-name="Roti Bakar Cokelat Keju" data-price="18000" data-tags="roti bakar cokelat keju manis">
+          <div class="kartu-emoji" aria-hidden="true">🍞</div>
+          <h3 class="nama">Roti Bakar Cokelat Keju</h3>
+          <p>Roti tebal panggang, cokelat leleh, parutan keju.</p>
+          <div class="kartu-foot"><span class="harga">Rp 18.000</span><button class="btn-add" type="button" aria-label="Tambah Roti Bakar Cokelat Keju">+</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="kategori" id="camilan" aria-labelledby="h-camilan">
+      <div class="kategori-head reveal">
+        <h2 id="h-camilan">Camilan &amp; Dessert</h2>
+        <p>Teman ngobrol sore sampai malam.</p>
+      </div>
+      <div class="kartu-wrap">
+        <article class="kartu-menu menu-item reveal tilt" data-name="Pisang Goreng Keju" data-price="15000" data-tags="pisang goreng keju camilan">
+          <div class="kartu-emoji" aria-hidden="true">🍌</div>
+          <h3 class="nama">Pisang Goreng Keju</h3>
+          <p>Kulit renyah, pisang kepok, taburan keju dan susu.</p>
+          <div class="kartu-foot"><span class="harga">Rp 15.000</span><button class="btn-add" type="button" aria-label="Tambah Pisang Goreng Keju">+</button></div>
+        </article>
+        <article class="kartu-menu menu-item reveal tilt" data-name="Kentang Goreng" data-price="17000" data-tags="kentang goreng camilan asin">
+          <div class="kartu-emoji" aria-hidden="true">🍟</div>
+          <h3 class="nama">Kentang Goreng</h3>
+          <p>Potongan tebal, bumbu paprika, saus sambal madu.</p>
+          <div class="kartu-foot"><span class="harga">Rp 17.000</span><button class="btn-add" type="button" aria-label="Tambah Kentang Goreng">+</button></div>
+        </article>
+        <article class="kartu-menu menu-item reveal tilt" data-name="Cheesecake Panggang" data-price="26000" data-tags="cheesecake kue dessert manis">
+          <span class="label-best">Best Seller</span>
+          <div class="kartu-emoji" aria-hidden="true">🍰</div>
+          <h3 class="nama">Cheesecake Panggang</h3>
+          <p>Lembut dan creamy, alas biskuit mentega, saus stroberi.</p>
+          <div class="kartu-foot"><span class="harga">Rp 26.000</span><button class="btn-add" type="button" aria-label="Tambah Cheesecake Panggang">+</button></div>
+        </article>
+        <article class="kartu-menu menu-item reveal tilt" data-name="Tahu Crispy Sambal Matah" data-price="16000" data-tags="tahu crispy sambal pedas camilan">
+          <div class="kartu-emoji" aria-hidden="true">🌶️</div>
+          <h3 class="nama">Tahu Crispy Sambal Matah</h3>
+          <p>Tahu goreng tepung, sambal matah segar khas Bali.</p>
+          <div class="kartu-foot"><span class="harga">Rp 16.000</span><button class="btn-add" type="button" aria-label="Tambah Tahu Crispy Sambal Matah">+</button></div>
+        </article>
+        <article class="kartu-menu menu-item reveal tilt" data-name="Es Krim Affogato" data-price="23000" data-tags="affogato es krim kopi dessert">
+          <div class="kartu-emoji" aria-hidden="true">🍨</div>
+          <h3 class="nama">Es Krim Affogato</h3>
+          <p>Es krim vanila disiram espresso panas.</p>
+          <div class="kartu-foot"><span class="harga">Rp 23.000</span><button class="btn-add" type="button" aria-label="Tambah Es Krim Affogato">+</button></div>
+        </article>
+      </div>
+    </section>
+
+    <p class="kosong" id="kosong" hidden>Menu tidak ditemukan. Coba kata kunci lain.</p>
+  </main>
+
+  <footer class="footer" id="info">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2>Jam Buka</h2>
+        <ul class="jam" id="jam">
+          <li data-hari="1,2,3,4,5"><span>Senin – Jumat</span><span>08.00 – 22.00</span></li>
+          <li data-hari="6,0"><span>Sabtu – Minggu</span><span>07.00 – 23.00</span></li>
+        </ul>
+        <p class="status" id="status">Memeriksa jam buka…</p>
+      </div>
+      <div class="footer-col">
+        <h2>Alamat</h2>
+        <address>Jl. Melati No. 17, Banjaran, Kec. Kota<br>Kota Kediri, Jawa Timur 64124</address>
+      </div>
+      <div class="footer-col">
+        <h2>Kontak</h2>
+        <p>WhatsApp: <a href="https://wa.me/6281234567890">0812-3456-7890</a></p>
+        <p>Instagram: @kopisenja.id</p>
+        <a class="btn btn-wa magnetic" href="https://wa.me/6281234567890?text=Halo%20Kopi%20Senja%2C%20saya%20mau%20pesan." target="_blank" rel="noopener">Pesan via WhatsApp</a>
+      </div>
+    </div>
+    <p class="copy">© 2026 Kopi Senja · Usaha fiktif untuk tugas Lokakarya 1</p>
+  </footer>
+
+  <button class="cart-fab" id="cartFab" type="button" aria-label="Buka keranjang pesanan">
+    <span aria-hidden="true">🛒</span><span class="cart-count" id="cartCount">0</span>
+  </button>
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="cart" id="cart" aria-label="Keranjang pesanan" aria-hidden="true">
+    <div class="cart-head"><h2>Pesananmu</h2><button type="button" class="cart-close" id="cartClose" aria-label="Tutup keranjang">×</button></div>
+    <ul class="cart-list" id="cartList"></ul>
+    <p class="cart-empty" id="cartEmpty">Belum ada pesanan. Tekan tombol + pada menu.</p>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">Rp 0</strong></div>
+      <a class="btn btn-wa" id="cartWa" href="#" target="_blank" rel="noopener" aria-disabled="true">Kirim pesanan via WhatsApp</a>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

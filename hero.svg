@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Ilustrasi secangkir kopi panas di atas piring">
+<defs>
+<radialGradient id="glow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#e8a33d" stop-opacity=".55"/><stop offset="1" stop-color="#e8a33d" stop-opacity="0"/></radialGradient>
+<linearGradient id="cup" x1="0" x2="1"><stop offset="0" stop-color="#f6ead4"/><stop offset=".6" stop-color="#ead6b4"/><stop offset="1" stop-color="#c9ae85"/></linearGradient>
+<linearGradient id="cof" x1="0" x2="1"><stop offset="0" stop-color="#4a2a17"/><stop offset="1" stop-color="#2a150b"/></linearGradient>
+</defs>
+<circle cx="300" cy="300" r="270" fill="url(#glow)"/>
+<ellipse cx="300" cy="470" rx="230" ry="46" fill="#000" opacity=".35"/>
+<ellipse cx="300" cy="448" rx="220" ry="48" fill="#d8bf93"/>
+<ellipse cx="300" cy="440" rx="220" ry="46" fill="url(#cup)"/>
+<ellipse cx="300" cy="438" rx="150" ry="30" fill="#e5cfa8"/>
+<path d="M150 250h300v110c0 68-60 108-150 108s-150-40-150-108z" fill="url(#cup)"/>
+<path d="M450 280h28c34 0 34 70 0 70h-34" fill="none" stroke="#ead6b4" stroke-width="22" stroke-linecap="round"/>
+<ellipse cx="300" cy="250" rx="150" ry="36" fill="#f6ead4"/>
+<ellipse cx="300" cy="254" rx="132" ry="29" fill="url(#cof)"/>
+<path d="M240 254c20-14 40 14 60 0s40-14 60 0c-20 14-40-12-60 0s-40 14-60 0z" fill="#e8a33d" opacity=".8"/>
+<path d="M190 330c4 50 40 82 110 82" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="8" stroke-linecap="round"/>
+<g fill="none" stroke="#f1e3cc" stroke-width="10" stroke-linecap="round" opacity=".75">
+<path class="s1" d="M250 200c-30-30 30-50 0-86"/>
+<path class="s2" d="M300 190c-30-34 30-60 0-100"/>
+<path class="s3" d="M350 200c-30-30 30-50 0-86"/>
+</g>
+<g fill="#3a1f10"><ellipse cx="88" cy="500" rx="26" ry="17" transform="rotate(-25 88 500)"/><ellipse cx="520" cy="505" rx="26" ry="17" transform="rotate(30 520 505)"/><ellipse cx="548" cy="470" rx="22" ry="14" transform="rotate(-10 548 470)"/></g>
+<g stroke="#e8a33d" stroke-width="3" fill="none"><path d="M70 500q18-6 36 0" transform="rotate(-25 88 500)"/><path d="M502 505q18-6 36 0" transform="rotate(30 520 505)"/></g>
+</svg>
